@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ApplicationController.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\CharacterBase.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\PlayerBehavior.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\PlayerStatsController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/William/Desktop/JogosDev/FallenWinged/FallenWinged/FallenWinged/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
