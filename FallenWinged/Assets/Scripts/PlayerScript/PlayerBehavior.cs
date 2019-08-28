@@ -12,7 +12,9 @@ public enum TypeCharacter
 
 public class PlayerBehavior : CharacterBase
 {
+    private int i;
     private TypeCharacter type;
+    private TypeItem itemType;
 
     //private AnimationController animationController;
 
@@ -47,17 +49,33 @@ public class PlayerBehavior : CharacterBase
 
 
     //perguntar pro rodrigo como fazer escolha da classe do player por 1 método só
-    public void SetPlayerType()
+    public void SetPlayerType(int aux)
     {
-        PlayerStatsController.SetTyperCharacter(TypeCharacter.Killer);
-        type = PlayerStatsController.GetTypeCharacter();
-        basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        if (aux == 1)
+        {
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Killer);
+            type = PlayerStatsController.GetTypeCharacter();
+            basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        }
+        else if(aux == 2)
+        {
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Achiever);
+            type = PlayerStatsController.GetTypeCharacter();
+            basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        }
     }
 
-    public void SetPlayer()
+    public void SetPlayer(int d)
     {
-        PlayerStatsController.SetTyperCharacter(TypeCharacter.Palestrinha);
-        type = PlayerStatsController.GetTypeCharacter();
-        basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        i=d;
+        SetPlayerType(i);
+    }
+
+
+    public void SetPlayerItem()
+    {
+        ItemController.SetItemType(TypeItem.Headset);
+        itemType = ItemController.GetItemType();
+        basicStats = ItemController.itemController.GetBasicItemStats(itemType);
     }
 }
