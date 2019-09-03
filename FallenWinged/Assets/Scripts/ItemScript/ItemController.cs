@@ -17,7 +17,7 @@ public class ItemStats
     public TypeItem item;
 }
 
-public class ItemController : MonoBehaviour
+public class ItemController : PlayerStatsController
 {
     public static ItemController itemController;
 

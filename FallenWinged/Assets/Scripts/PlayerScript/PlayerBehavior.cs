@@ -57,7 +57,7 @@ public class PlayerBehavior : CharacterBase
             type = PlayerStatsController.GetTypeCharacter();
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
-        else if(aux == 2)
+        else if (aux == 2)
         {
             PlayerStatsController.SetTyperCharacter(TypeCharacter.Achiever);
             type = PlayerStatsController.GetTypeCharacter();
@@ -67,7 +67,7 @@ public class PlayerBehavior : CharacterBase
 
     public void SetPlayer(int d)
     {
-        i=d;
+        i = d;
         SetPlayerType(i);
     }
 
@@ -76,6 +76,48 @@ public class PlayerBehavior : CharacterBase
     {
         ItemController.SetItemType(TypeItem.Headset);
         itemType = ItemController.GetItemType();
-        basicStats = ItemController.itemController.GetBasicItemStats(itemType);
+        var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+        print(basicStats.reflexo);
+
+        basicStats.AddValues(basicStatsItem);
+
+        print(basicStats.reflexo);
     }
+
+    public void PlayerActionTest(int aux)
+    {
+        PlayerStatsController.instance.challengeDifficulty = aux;
+        int addStatus = Random.Range(1, 10);
+
+        if(PlayerStatsController.instance.challengeDifficulty == 15)
+        {
+            if(basicStats.concentracao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            {
+                print(addStatus + " " + (basicStats.concentracao + addStatus));
+                PlayerStatsController.AddXp(100);
+            }
+            else
+            {
+                print(addStatus + " " + basicStats.concentracao + addStatus);
+                PlayerStatsController.AddXp(10);
+            }
+        }
+        else if(PlayerStatsController.instance.challengeDifficulty == 18)
+        {
+            if(basicStats.precisao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            {
+                print(addStatus + " " + (basicStats.precisao + addStatus));
+                PlayerStatsController.AddXp(200);
+            }
+            else
+            {
+                print(addStatus + " " + (basicStats.precisao + addStatus));
+                PlayerStatsController.AddXp(20);
+            }
+        }
+
+
+    }
+
 }

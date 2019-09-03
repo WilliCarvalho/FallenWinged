@@ -16,7 +16,10 @@ public class PlayerStatsController : MonoBehaviour
     public int xpMultiply = 1;
     public float xpFirstLevel = 100;
     public float difficultFactor = 1.5f;
+
     public List<BasicInfoChar> baseInfoChars;
+
+    public int challengeDifficulty;
 
 
 
