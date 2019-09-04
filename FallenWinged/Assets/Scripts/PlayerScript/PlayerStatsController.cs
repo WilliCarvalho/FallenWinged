@@ -20,6 +20,7 @@ public class PlayerStatsController : MonoBehaviour
     public List<BasicInfoChar> baseInfoChars;
 
     public int challengeDifficulty;
+    public int coins = 0;
 
 
 

@@ -96,11 +96,13 @@ public class PlayerBehavior : CharacterBase
             {
                 print(addStatus + " " + (basicStats.concentracao + addStatus));
                 PlayerStatsController.AddXp(100);
+                PlayerStatsController.instance.coins += 50;
             }
             else
             {
                 print(addStatus + " " + basicStats.concentracao + addStatus);
                 PlayerStatsController.AddXp(10);
+                PlayerStatsController.instance.coins += 5;
             }
         }
         else if(PlayerStatsController.instance.challengeDifficulty == 18)
