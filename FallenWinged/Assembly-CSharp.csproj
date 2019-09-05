@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\ItemScript\ItemController.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\CharacterBase.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\CharacterUIController.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerStatsController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
