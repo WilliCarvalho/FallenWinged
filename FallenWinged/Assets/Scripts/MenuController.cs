@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     public GameObject selectPlayerMenu;
 
     public GameObject character1, character2, character3, character4, equipmentselection, mentordialogue1, mentordialogue2, championshipscreen,
-        rankedpanel, regionalpanel, nacionapanel, mundialpanel, store, stats, gameplay;
+        rankedpanel, regionalpanel, nacionapanel, mundialpanel, store, stats, gameplay, statusDisplayValues;
 
 
 
@@ -45,12 +45,18 @@ public class MenuController : MonoBehaviour
         store.SetActive(false);
         stats.SetActive(false);
         gameplay.SetActive(false);
+        statusDisplayValues.SetActive(false);
     }
 
     public void ActiveMenu(GameObject menu)
     {
         HideMenu();
         menu.SetActive(true);
+
+        if(menu.tag == "CharacterSelect")
+        {
+            statusDisplayValues.SetActive(true);
+        }
     }
 
     //activate the exit method in ApplicationController

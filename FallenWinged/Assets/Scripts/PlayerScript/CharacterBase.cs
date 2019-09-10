@@ -18,6 +18,14 @@ public class BasicStats
         precisao += baseStatsToadd.precisao;
         reflexo += baseStatsToadd.reflexo;
     }
+
+    public void RemoveValues(BasicStats baseStatsToadd)
+    {
+        concentracao -= baseStatsToadd.concentracao;
+        comunicacao -= baseStatsToadd.comunicacao;
+        precisao -= baseStatsToadd.precisao;
+        reflexo -= baseStatsToadd.reflexo;
+    }
 }
 
 public abstract class CharacterBase : MonoBehaviour

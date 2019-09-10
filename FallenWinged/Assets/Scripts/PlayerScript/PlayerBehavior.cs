@@ -17,10 +17,12 @@ public class PlayerBehavior : CharacterBase
     private TypeCharacter type;
     private TypeItem itemType;
 
-    public Text ValorComun;
-    public Text ValorConc;
-    public Text ValorPrec;
-    public Text ValorRefle;
+    public Text valorComun;
+    public Text valorConc;
+    public Text valorPrec;
+    public Text valorRefle;
+
+    private int itemId;
 
     //private AnimationController animationController;
 
@@ -33,10 +35,10 @@ public class PlayerBehavior : CharacterBase
         //animationController = GetComponent<AnimationController>();
         basicStats = PlayerStatsController.instance.GetBasicStats(type);
 
-        ValorComun.text = basicStats.comunicacao.ToString();
-        ValorConc.text = basicStats.concentracao.ToString();
-        ValorPrec.text = basicStats.precisao.ToString();
-        ValorRefle.text = basicStats.reflexo.ToString();
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
     }
 
     // Update is called once per frame
@@ -58,10 +60,9 @@ public class PlayerBehavior : CharacterBase
         //}
     }
 
-
-    //perguntar pro rodrigo como fazer escolha da classe do player por 1 método só
     public void SetPlayerType(int aux)
     {
+
         if (aux == 0)
         {
             PlayerStatsController.SetTyperCharacter(TypeCharacter.Achiever);
@@ -86,6 +87,59 @@ public class PlayerBehavior : CharacterBase
             type = PlayerStatsController.GetTypeCharacter();
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
+
+
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
+        TextColorChange();
+    }
+
+    public void TextColorChange()
+    {
+        TextColorReset();
+
+        if (basicStats.comunicacao > 10)
+        {
+            valorComun.GetComponent<Text>().color = Color.green;
+        }
+        else if(basicStats.comunicacao < 10)
+        {
+            valorComun.GetComponent<Text>().color = Color.red;
+        }
+        if (basicStats.concentracao > 10)
+        {
+            valorConc.GetComponent<Text>().color = Color.green;
+        }
+        else if (basicStats.concentracao < 10)
+        {
+            valorConc.GetComponent<Text>().color = Color.red;
+        }
+        if (basicStats.precisao > 10)
+        {
+            valorPrec.GetComponent<Text>().color = Color.green;
+        }
+        else if (basicStats.precisao < 10)
+        {
+            valorPrec.GetComponent<Text>().color = Color.red;
+        }
+        if (basicStats.reflexo > 10)
+        {
+            valorRefle.GetComponent<Text>().color = Color.green;
+        }
+        else if (basicStats.reflexo < 10)
+        {
+            valorRefle.GetComponent<Text>().color = Color.red;
+        }
+    }
+
+    public void TextColorReset()
+    {
+        valorComun.GetComponent<Text>().color = Color.white;
+        valorConc.GetComponent<Text>().color = Color.white;
+        valorPrec.GetComponent<Text>().color = Color.white;
+        valorRefle.GetComponent<Text>().color = Color.white;
     }
 
     public void SetPlayer(int d)
@@ -97,6 +151,7 @@ public class PlayerBehavior : CharacterBase
 
     public void SetPlayerItem(int aux)
     {
+        itemId = aux;
 
         if (aux == 0)
         {
@@ -104,11 +159,7 @@ public class PlayerBehavior : CharacterBase
             itemType = ItemController.GetItemType();
             var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-            print(basicStats.comunicacao);
-
             basicStats.AddValues(basicStatsItem);
-
-            print(basicStats.comunicacao);
         }
         if (aux == 1)
         {
@@ -116,11 +167,7 @@ public class PlayerBehavior : CharacterBase
             itemType = ItemController.GetItemType();
             var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-            print(basicStats.concentracao);
-
             basicStats.AddValues(basicStatsItem);
-
-            print(basicStats.concentracao);
         }
         if (aux == 2)
         {
@@ -128,11 +175,7 @@ public class PlayerBehavior : CharacterBase
             itemType = ItemController.GetItemType();
             var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-            print(basicStats.precisao);
-
             basicStats.AddValues(basicStatsItem);
-
-            print(basicStats.precisao);
         }
         if (aux == 3)
         {
@@ -140,11 +183,7 @@ public class PlayerBehavior : CharacterBase
             itemType = ItemController.GetItemType();
             var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-            print(basicStats.reflexo);
-
             basicStats.AddValues(basicStatsItem);
-
-            print(basicStats.reflexo);
         }
     }
 
@@ -152,6 +191,43 @@ public class PlayerBehavior : CharacterBase
     {
         i = d;
         SetPlayerItem(i);
+    }
+
+    public void RemovePlayerItem()
+    {
+
+        if (itemId == 0)
+        {
+            ItemController.SetItemType(TypeItem.Headset);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            basicStats.RemoveValues(basicStatsItem);
+        }
+        if (itemId == 1)
+        {
+            ItemController.SetItemType(TypeItem.Glasses);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            basicStats.RemoveValues(basicStatsItem);
+        }
+        if (itemId == 2)
+        {
+            ItemController.SetItemType(TypeItem.Mouse);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            basicStats.RemoveValues(basicStatsItem);
+        }
+        if (itemId == 3)
+        {
+            ItemController.SetItemType(TypeItem.Keyboard);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            basicStats.RemoveValues(basicStatsItem);
+        }
     }
 
     public void PlayerActionTest(int aux)
