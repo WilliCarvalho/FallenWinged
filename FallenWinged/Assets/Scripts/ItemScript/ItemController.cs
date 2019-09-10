@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum TypeItem
 {
-    Mouse = 0,
-    Keyboard = 1,
-    Headset = 2,
-    Glasses = 3
+    Headset = 0,
+    Glasses = 1,
+    Mouse = 2,
+    Keyboard = 3
 }
 
 [System.Serializable]
@@ -41,22 +41,22 @@ public class ItemController : PlayerStatsController
 
         if (typeId == 0)
         {
-            return TypeItem.Mouse;
+            return TypeItem.Headset;
         }
         else if (typeId == 1)
         {
-            return TypeItem.Keyboard;
+            return TypeItem.Glasses;
         }
         else if (typeId == 2)
         {
-            return TypeItem.Headset;
+            return TypeItem.Mouse;
         }
         else if (typeId == 3)
         {
-            return TypeItem.Glasses;
+            return TypeItem.Keyboard;
         }
 
-        return TypeItem.Mouse;
+        return TypeItem.Headset;
     }
 
     public BasicStats GetBasicItemStats(TypeItem itemType)

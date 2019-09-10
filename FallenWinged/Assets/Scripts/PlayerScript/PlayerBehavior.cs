@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum TypeCharacter
 {
     Achiever = 0,
-    Palestrinha = 1,
+    Social = 1,
     Killer = 2,
     Explorer = 3
 }
@@ -15,6 +16,11 @@ public class PlayerBehavior : CharacterBase
     private int i;
     private TypeCharacter type;
     private TypeItem itemType;
+
+    public Text ValorComun;
+    public Text ValorConc;
+    public Text ValorPrec;
+    public Text ValorRefle;
 
     //private AnimationController animationController;
 
@@ -26,6 +32,11 @@ public class PlayerBehavior : CharacterBase
         type = PlayerStatsController.GetTypeCharacter();
         //animationController = GetComponent<AnimationController>();
         basicStats = PlayerStatsController.instance.GetBasicStats(type);
+
+        ValorComun.text = basicStats.comunicacao.ToString();
+        ValorConc.text = basicStats.concentracao.ToString();
+        ValorPrec.text = basicStats.precisao.ToString();
+        ValorRefle.text = basicStats.reflexo.ToString();
     }
 
     // Update is called once per frame
@@ -51,15 +62,27 @@ public class PlayerBehavior : CharacterBase
     //perguntar pro rodrigo como fazer escolha da classe do player por 1 método só
     public void SetPlayerType(int aux)
     {
-        if (aux == 1)
+        if (aux == 0)
         {
-            PlayerStatsController.SetTyperCharacter(TypeCharacter.Killer);
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Achiever);
+            type = PlayerStatsController.GetTypeCharacter();
+            basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        }
+        else if (aux == 1)
+        {
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Social);
             type = PlayerStatsController.GetTypeCharacter();
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
         else if (aux == 2)
         {
-            PlayerStatsController.SetTyperCharacter(TypeCharacter.Achiever);
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Killer);
+            type = PlayerStatsController.GetTypeCharacter();
+            basicStats = PlayerStatsController.instance.GetBasicStats(type);
+        }
+        else if (aux == 3)
+        {
+            PlayerStatsController.SetTyperCharacter(TypeCharacter.Explorer);
             type = PlayerStatsController.GetTypeCharacter();
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
@@ -72,17 +95,63 @@ public class PlayerBehavior : CharacterBase
     }
 
 
-    public void SetPlayerItem()
+    public void SetPlayerItem(int aux)
     {
-        ItemController.SetItemType(TypeItem.Headset);
-        itemType = ItemController.GetItemType();
-        var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-        print(basicStats.reflexo);
+        if (aux == 0)
+        {
+            ItemController.SetItemType(TypeItem.Headset);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
 
-        basicStats.AddValues(basicStatsItem);
+            print(basicStats.comunicacao);
 
-        print(basicStats.reflexo);
+            basicStats.AddValues(basicStatsItem);
+
+            print(basicStats.comunicacao);
+        }
+        if (aux == 1)
+        {
+            ItemController.SetItemType(TypeItem.Glasses);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            print(basicStats.concentracao);
+
+            basicStats.AddValues(basicStatsItem);
+
+            print(basicStats.concentracao);
+        }
+        if (aux == 2)
+        {
+            ItemController.SetItemType(TypeItem.Mouse);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            print(basicStats.precisao);
+
+            basicStats.AddValues(basicStatsItem);
+
+            print(basicStats.precisao);
+        }
+        if (aux == 3)
+        {
+            ItemController.SetItemType(TypeItem.Keyboard);
+            itemType = ItemController.GetItemType();
+            var basicStatsItem = ItemController.itemController.GetBasicItemStats(itemType);
+
+            print(basicStats.reflexo);
+
+            basicStats.AddValues(basicStatsItem);
+
+            print(basicStats.reflexo);
+        }
+    }
+
+    public void SetPlayerItemType(int d)
+    {
+        i = d;
+        SetPlayerItem(i);
     }
 
     public void PlayerActionTest(int aux)
@@ -96,11 +165,13 @@ public class PlayerBehavior : CharacterBase
             {
                 print(addStatus + " " + (basicStats.concentracao + addStatus));
                 PlayerStatsController.AddXp(100);
+                PlayerStatsController.instance.coins += 50;
             }
             else
             {
                 print(addStatus + " " + basicStats.concentracao + addStatus);
                 PlayerStatsController.AddXp(10);
+                PlayerStatsController.instance.coins += 5;
             }
         }
         else if(PlayerStatsController.instance.challengeDifficulty == 18)

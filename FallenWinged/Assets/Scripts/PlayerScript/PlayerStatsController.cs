@@ -20,6 +20,7 @@ public class PlayerStatsController : MonoBehaviour
     public List<BasicInfoChar> baseInfoChars;
 
     public int challengeDifficulty;
+    public int coins = 0;
 
 
 
@@ -61,12 +62,12 @@ public class PlayerStatsController : MonoBehaviour
     {
         return PlayerPrefs.GetFloat("currentXp");
     }
-
+    //Controls the players current level
     public static int GetCurrentLevel()
     {
         return PlayerPrefs.GetInt("currentLevel");
     }
-
+   
     public static void AddLevel()
     {
         int newLevel = GetCurrentLevel() + 1;
@@ -88,7 +89,7 @@ public class PlayerStatsController : MonoBehaviour
         }
         else if (typeId == 1)
         {
-            return TypeCharacter.Palestrinha;
+            return TypeCharacter.Social;
         }
         else if (typeId == 2)
         {
@@ -120,10 +121,10 @@ public class PlayerStatsController : MonoBehaviour
         return baseInfoChars[0].baseInfo;
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0, 150, 50), "Current Xp = " + GetCurrentXp());
-        GUI.Label(new Rect(0, 15, 150, 50), "Current Level = " + GetCurrentLevel());
-        GUI.Label(new Rect(0, 30, 150, 50), "Current Next Xp = " + GetNextXp());
-    }
+    //void OnGUI()
+    //{
+    //    GUI.Label(new Rect(0, 0, 150, 50), "Current Xp = " + GetCurrentXp());
+    //    GUI.Label(new Rect(0, 15, 150, 50), "Current Level = " + GetCurrentLevel());
+    //    GUI.Label(new Rect(0, 30, 150, 50), "Current Next Xp = " + GetNextXp());
+    //}
 }

@@ -7,18 +7,17 @@ public class MenuController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject selectPlayerMenu;
 
-    public GameObject character1, character2, character3, character4;
+    public GameObject character1, character2, character3, character4, equipmentselection, mentordialogue1, mentordialogue2, championshipscreen,
+        rankedpanel, regionalpanel, nacionapanel, mundialpanel, store, stats, gameplay;
 
-    public int i = 1;
+
+
+    //public int i = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        ActiveMenu(mainMenu);
-        character1.SetActive(true);
-        character2.SetActive(false);
-        character3.SetActive(false);
-        character4.SetActive(false);
+        ActiveMenu(mainMenu);        
     }
 
     // Update is called once per frame
@@ -27,10 +26,25 @@ public class MenuController : MonoBehaviour
         
     }
 
-    void HideMenu()
+    public void HideMenu()
     {
         mainMenu.SetActive(false);
         selectPlayerMenu.SetActive(false);
+        character1.SetActive(false);
+        character2.SetActive(false);
+        character3.SetActive(false);
+        character4.SetActive(false);
+        equipmentselection.SetActive(false);
+        mentordialogue1.SetActive(false);
+        mentordialogue2.SetActive(false);
+        championshipscreen.SetActive(false);
+        rankedpanel.SetActive(false);
+        regionalpanel.SetActive(false);
+        nacionapanel.SetActive(false);
+        mundialpanel.SetActive(false);
+        store.SetActive(false);
+        stats.SetActive(false);
+        gameplay.SetActive(false);
     }
 
     public void ActiveMenu(GameObject menu)
@@ -50,33 +64,33 @@ public class MenuController : MonoBehaviour
         Application.LoadLevel("Gameplay");
     }
 
-    public void SelectCharacter()
-    {
-        if(i == 1)
-        {
-            HideCharacters(character1, character2, character3, character4);
-            character1.SetActive(true);
-        }
-        else if (i == 2)
-        {
-            HideCharacters(character1, character2, character3, character4);
-            character2.SetActive(true);
-        }
-        else if (i == 3)
-        {
-            HideCharacters(character1, character2, character3, character4);
-            character3.SetActive(true);
-        }
-        else if (i == 4)
-        {
-            HideCharacters(character1, character2, character3, character4);
-            character4.SetActive(true);
-            i = 0;
-        }
+    //public void selectcharacter()
+    //{
+    //    if(i == 1)
+    //    {
+    //        hidecharacters(character1, character2, character3, character4);
+    //        character1.setactive(true);
+    //    }
+    //    else if (i == 2)
+    //    {
+    //        hidecharacters(character1, character2, character3, character4);
+    //        character2.setactive(true);
+    //    }
+    //    else if (i == 3)
+    //    {
+    //        hidecharacters(character1, character2, character3, character4);
+    //        character3.setactive(true);
+    //    }
+    //    else if (i == 4)
+    //    {
+    //        hidecharacters(character1, character2, character3, character4);
+    //        character4.setactive(true);
+    //        i = 0;
+    //    }
 
-        i++;
+    //    i++;
 
-    }
+    //}
 
     public void HideCharacters(GameObject character1, GameObject character2, GameObject character3, GameObject character4)
     {
