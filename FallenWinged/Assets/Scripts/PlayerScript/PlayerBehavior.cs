@@ -13,6 +13,8 @@ public enum TypeCharacter
 
 public class PlayerBehavior : CharacterBase
 {
+    public static PlayerBehavior instance;
+
     private int i;
     private TypeCharacter type;
     private TypeItem itemType;
@@ -21,6 +23,30 @@ public class PlayerBehavior : CharacterBase
     public Text valorConc;
     public Text valorPrec;
     public Text valorRefle;
+
+    public Text textConcentracao;
+    public Text textComunicacao;
+    public Text textPrecisao;
+    public Text textReflexo;
+
+    public Text storeTextConcentracao;
+    public Text storeTextComunicacao;
+    public Text storeTextPrecisao;
+    public Text storeTextReflexo;
+
+    public GameObject
+        idleSprite,
+        successSprite,
+        failSprite,
+        startButton,
+        successText,
+        failText,
+        firstActionText,
+        secondActionText,
+        thirdActionText,
+        popUpPanel;
+
+
 
     private int itemId;
 
@@ -39,6 +65,18 @@ public class PlayerBehavior : CharacterBase
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
+
+        textComunicacao.text = basicStats.comunicacao.ToString();
+        textConcentracao.text = basicStats.concentracao.ToString();
+        textPrecisao.text = basicStats.precisao.ToString();
+        textReflexo.text = basicStats.reflexo.ToString();
+
+        storeTextComunicacao.text = basicStats.comunicacao.ToString();
+        storeTextConcentracao.text = basicStats.concentracao.ToString();
+        storeTextPrecisao.text = basicStats.precisao.ToString();
+        storeTextReflexo.text = basicStats.reflexo.ToString();
+
+        HideGameplayUI();
     }
 
     // Update is called once per frame
@@ -93,6 +131,16 @@ public class PlayerBehavior : CharacterBase
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
+
+        textComunicacao.text = basicStats.comunicacao.ToString();
+        textConcentracao.text = basicStats.concentracao.ToString();
+        textPrecisao.text = basicStats.precisao.ToString();
+        textReflexo.text = basicStats.reflexo.ToString();
+
+        storeTextComunicacao.text = basicStats.comunicacao.ToString();
+        storeTextConcentracao.text = basicStats.concentracao.ToString();
+        storeTextPrecisao.text = basicStats.precisao.ToString();
+        storeTextReflexo.text = basicStats.reflexo.ToString();
         TextColorChange();
     }
 
@@ -232,6 +280,8 @@ public class PlayerBehavior : CharacterBase
 
     public void PlayerActionTest(int aux)
     {
+        HideGameplayUI();
+
         PlayerStatsController.instance.challengeDifficulty = aux;
         int addStatus = Random.Range(1, 10);
 
@@ -242,12 +292,18 @@ public class PlayerBehavior : CharacterBase
                 print(addStatus + " " + (basicStats.concentracao + addStatus));
                 PlayerStatsController.AddXp(100);
                 PlayerStatsController.instance.coins += 50;
+                HideGameplayUI();
+                successSprite.SetActive(true);
+                successText.SetActive(true);
             }
             else
             {
                 print(addStatus + " " + basicStats.concentracao + addStatus);
                 PlayerStatsController.AddXp(10);
                 PlayerStatsController.instance.coins += 5;
+                HideGameplayUI();
+                failSprite.SetActive(true);
+                failText.SetActive(true);
             }
         }
         else if(PlayerStatsController.instance.challengeDifficulty == 18)
@@ -255,16 +311,41 @@ public class PlayerBehavior : CharacterBase
             if(basicStats.precisao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
             {
                 print(addStatus + " " + (basicStats.precisao + addStatus));
-                PlayerStatsController.AddXp(200);
+                PlayerStatsController.AddXp(100);
+                HideGameplayUI();
+                successSprite.SetActive(true);
+                successText.SetActive(true);
             }
             else
             {
                 print(addStatus + " " + (basicStats.precisao + addStatus));
-                PlayerStatsController.AddXp(20);
+                PlayerStatsController.AddXp(10);
+                HideGameplayUI();
+                failSprite.SetActive(true);
+                failText.SetActive(true);
             }
         }
 
 
+    }
+
+    public void ActiveMenu(GameObject menu)
+    {
+        HideGameplayUI();
+        menu.SetActive(true);
+    }
+
+    public void HideGameplayUI()
+    {
+        successSprite.SetActive(false);
+        failSprite.SetActive(false);
+        startButton.SetActive(false);
+        successText.SetActive(false);
+        failText.SetActive(false);
+        firstActionText.SetActive(false);
+        secondActionText.SetActive(false);
+        thirdActionText.SetActive(false);
+        popUpPanel.SetActive(false);
     }
 
 }

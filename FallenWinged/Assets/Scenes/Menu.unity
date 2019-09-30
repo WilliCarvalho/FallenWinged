@@ -895,12 +895,12 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &81820800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
         m_MethodName: ActiveMenu
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 531159246}
+          m_ObjectArgument: {fileID: 1312960781}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2207,7 +2207,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 99871850}
+        m_MethodName: PlayerActionTest
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &310224285
@@ -3572,7 +3583,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454432142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3581,7 +3592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -753}
+  m_AnchoredPosition: {x: 0, y: -753.00195}
   m_SizeDelta: {x: 750, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454432144
@@ -7152,7 +7163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &783736799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9144,8 +9155,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 10
 --- !u!222 &1040926324
@@ -9223,8 +9234,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 10
 --- !u!222 &1045515734
@@ -9871,12 +9882,12 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1109088974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10227,7 +10238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1147275044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11551,7 +11562,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1330625732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11929,6 +11940,96 @@ PrefabInstance:
       propertyPath: valorRefle
       value: 
       objectReference: {fileID: 1590255884}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: textComunicacao
+      value: 
+      objectReference: {fileID: 1109088973}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: textConcentracao
+      value: 
+      objectReference: {fileID: 2092053622}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: textPrecisao
+      value: 
+      objectReference: {fileID: 81820799}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: textReflexo
+      value: 
+      objectReference: {fileID: 1781990348}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: storeTextConcentracao
+      value: 
+      objectReference: {fileID: 1831913437}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: storeTextComunicacao
+      value: 
+      objectReference: {fileID: 783736798}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: storeTextPrecisao
+      value: 
+      objectReference: {fileID: 1330625731}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: storeTextReflexo
+      value: 
+      objectReference: {fileID: 1147275043}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 438231051}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: successSprite
+      value: 
+      objectReference: {fileID: 1746660893}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: failSprite
+      value: 
+      objectReference: {fileID: 1254509055}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: startButton
+      value: 
+      objectReference: {fileID: 1620570812}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: successText
+      value: 
+      objectReference: {fileID: 380516326}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: failText
+      value: 
+      objectReference: {fileID: 455862284}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: firstActionText
+      value: 
+      objectReference: {fileID: 454432142}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: secondActionText
+      value: 
+      objectReference: {fileID: 352474495}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: thirdActionText
+      value: 
+      objectReference: {fileID: 1975222076}
+    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
+        type: 3}
+      propertyPath: popUpPanel
+      value: 
+      objectReference: {fileID: 1650332907}
     - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13517,7 +13618,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 670232277}
+      - m_Target: {fileID: 99871850}
         m_MethodName: ActiveMenu
         m_Mode: 2
         m_Arguments:
@@ -14587,8 +14688,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 10
 --- !u!222 &1590255885
@@ -14953,7 +15054,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 99871850}
+        m_MethodName: PlayerActionTest
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &1616332019
@@ -16309,12 +16421,12 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1781990349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17107,7 +17219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &1831913438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18360,8 +18472,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 10
 --- !u!222 &1920476427
@@ -19353,12 +19465,12 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &2092053623
 CanvasRenderer:
   m_ObjectHideFlags: 0

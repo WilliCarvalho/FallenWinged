@@ -11,20 +11,20 @@ public class BasicStats
     public int precisao;
     public int reflexo;
 
-    public void AddValues(BasicStats baseStatsToadd)
+    public void AddValues(BasicStats baseStatsToAdd)
     {
-        concentracao += baseStatsToadd.concentracao;
-        comunicacao += baseStatsToadd.comunicacao;
-        precisao += baseStatsToadd.precisao;
-        reflexo += baseStatsToadd.reflexo;
+        concentracao += baseStatsToAdd.concentracao;
+        comunicacao += baseStatsToAdd.comunicacao;
+        precisao += baseStatsToAdd.precisao;
+        reflexo += baseStatsToAdd.reflexo;
     }
 
-    public void RemoveValues(BasicStats baseStatsToadd)
+    public void RemoveValues(BasicStats baseStatsToRemove)
     {
-        concentracao -= baseStatsToadd.concentracao;
-        comunicacao -= baseStatsToadd.comunicacao;
-        precisao -= baseStatsToadd.precisao;
-        reflexo -= baseStatsToadd.reflexo;
+        concentracao -= baseStatsToRemove.concentracao;
+        comunicacao -= baseStatsToRemove.comunicacao;
+        precisao -= baseStatsToRemove.precisao;
+        reflexo -= baseStatsToRemove.reflexo;
     }
 }
 
