@@ -37,7 +37,7 @@ public class ItemController : PlayerStatsController
 
     public static TypeItem GetItemType()
     {
-        int typeId = PlayerPrefs.GetInt("TypeCharacter");
+        int typeId = PlayerPrefs.GetInt("TypeItem");
 
         if (typeId == 0)
         {
