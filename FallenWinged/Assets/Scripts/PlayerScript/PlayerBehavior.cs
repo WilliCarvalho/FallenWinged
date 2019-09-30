@@ -233,6 +233,21 @@ public class PlayerBehavior : CharacterBase
 
             basicStats.AddValues(basicStatsItem);
         }
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
+
+        textComunicacao.text = basicStats.comunicacao.ToString();
+        textConcentracao.text = basicStats.concentracao.ToString();
+        textPrecisao.text = basicStats.precisao.ToString();
+        textReflexo.text = basicStats.reflexo.ToString();
+
+        storeTextComunicacao.text = basicStats.comunicacao.ToString();
+        storeTextConcentracao.text = basicStats.concentracao.ToString();
+        storeTextPrecisao.text = basicStats.precisao.ToString();
+        storeTextReflexo.text = basicStats.reflexo.ToString();
+
     }
 
     public void SetPlayerItemType(int d)
@@ -332,6 +347,7 @@ public class PlayerBehavior : CharacterBase
     public void ActiveMenu(GameObject menu)
     {
         HideGameplayUI();
+        idleSprite.SetActive(true);
         menu.SetActive(true);
     }
 
@@ -346,6 +362,7 @@ public class PlayerBehavior : CharacterBase
         secondActionText.SetActive(false);
         thirdActionText.SetActive(false);
         popUpPanel.SetActive(false);
+        idleSprite.SetActive(false);
     }
 
 }
