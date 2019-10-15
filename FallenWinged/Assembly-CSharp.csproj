@@ -62,12 +62,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ApplicationController.cs" />
     <Compile Include="Assets\Scripts\GameplayController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemBase.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemController.cs" />
     <Compile Include="Assets\Scripts\Inventory\SlotInventoryBehavior.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\CharacterBase.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerBehavior.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerStatsController.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/JogosDev/FallenWinged/FallenWinged/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

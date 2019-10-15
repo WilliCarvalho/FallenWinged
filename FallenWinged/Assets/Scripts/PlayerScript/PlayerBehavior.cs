@@ -15,7 +15,7 @@ public class PlayerBehavior : CharacterBase
 {
     public static PlayerBehavior instance;
 
-    private int i;
+    public int i;
     private TypeCharacter type;
     private TypeItem itemType;
 
@@ -24,27 +24,21 @@ public class PlayerBehavior : CharacterBase
     public Text valorPrec;
     public Text valorRefle;
 
-    public Text textConcentracao;
-    public Text textComunicacao;
-    public Text textPrecisao;
-    public Text textReflexo;
-
-    public Text storeTextConcentracao;
-    public Text storeTextComunicacao;
-    public Text storeTextPrecisao;
-    public Text storeTextReflexo;
-
     public GameObject
         idleSprite,
         successSprite,
         failSprite,
         startButton,
+        secondButton,
+        thirdButton,
         successText,
         failText,
         firstActionText,
         secondActionText,
         thirdActionText,
-        popUpPanel;
+        popUpPanel,
+        popUpPanel2,
+        popUpPanel3;
 
 
 
@@ -66,36 +60,13 @@ public class PlayerBehavior : CharacterBase
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
 
-        textComunicacao.text = basicStats.comunicacao.ToString();
-        textConcentracao.text = basicStats.concentracao.ToString();
-        textPrecisao.text = basicStats.precisao.ToString();
-        textReflexo.text = basicStats.reflexo.ToString();
-
-        storeTextComunicacao.text = basicStats.comunicacao.ToString();
-        storeTextConcentracao.text = basicStats.concentracao.ToString();
-        storeTextPrecisao.text = basicStats.precisao.ToString();
-        storeTextReflexo.text = basicStats.reflexo.ToString();
-
         HideGameplayUI();
     }
 
     // Update is called once per frame
     new void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.C))
-        //{
-        //    //print("estou andando");
-        //    animationController.PlayAnimation(AnimationStates.WALKING);
-        //    // print("continuo andando");
-        //}
-        //else if (Input.GetKeyDown(KeyCode.V))
-        //{
-        //    animationController.PlayAnimation(AnimationStates.RUNNING);
-        //}
-        //else if (Input.GetKeyDown(KeyCode.D))
-        //{
-        //    animationController.PlayAnimation(AnimationStates.IDLE);
-        //}
+
     }
 
     public void SetPlayerType(int aux)
@@ -126,21 +97,10 @@ public class PlayerBehavior : CharacterBase
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
 
-
         valorComun.text = basicStats.comunicacao.ToString();
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
-
-        textComunicacao.text = basicStats.comunicacao.ToString();
-        textConcentracao.text = basicStats.concentracao.ToString();
-        textPrecisao.text = basicStats.precisao.ToString();
-        textReflexo.text = basicStats.reflexo.ToString();
-
-        storeTextComunicacao.text = basicStats.comunicacao.ToString();
-        storeTextConcentracao.text = basicStats.concentracao.ToString();
-        storeTextPrecisao.text = basicStats.precisao.ToString();
-        storeTextReflexo.text = basicStats.reflexo.ToString();
         TextColorChange();
     }
 
@@ -238,16 +198,6 @@ public class PlayerBehavior : CharacterBase
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
 
-        textComunicacao.text = basicStats.comunicacao.ToString();
-        textConcentracao.text = basicStats.concentracao.ToString();
-        textPrecisao.text = basicStats.precisao.ToString();
-        textReflexo.text = basicStats.reflexo.ToString();
-
-        storeTextComunicacao.text = basicStats.comunicacao.ToString();
-        storeTextConcentracao.text = basicStats.concentracao.ToString();
-        storeTextPrecisao.text = basicStats.precisao.ToString();
-        storeTextReflexo.text = basicStats.reflexo.ToString();
-
     }
 
     public void SetPlayerItemType(int d)
@@ -344,6 +294,19 @@ public class PlayerBehavior : CharacterBase
 
     }
 
+    public void SetActionButton(GameObject button)
+    {
+        HideButton();
+        button.SetActive(true);
+    }
+
+    public void HideButton()
+    {
+        startButton.SetActive(false);
+        secondButton.SetActive(false);
+        thirdButton.SetActive(false);
+    }
+
     public void ActiveMenu(GameObject menu)
     {
         HideGameplayUI();
@@ -356,12 +319,16 @@ public class PlayerBehavior : CharacterBase
         successSprite.SetActive(false);
         failSprite.SetActive(false);
         startButton.SetActive(false);
+        secondButton.SetActive(false);
+        thirdButton.SetActive(false);
         successText.SetActive(false);
         failText.SetActive(false);
         firstActionText.SetActive(false);
         secondActionText.SetActive(false);
         thirdActionText.SetActive(false);
         popUpPanel.SetActive(false);
+        popUpPanel2.SetActive(false);
+        popUpPanel3.SetActive(false);
         idleSprite.SetActive(false);
     }
 
