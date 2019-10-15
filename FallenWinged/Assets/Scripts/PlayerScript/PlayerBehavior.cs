@@ -60,7 +60,7 @@ public class PlayerBehavior : CharacterBase
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
 
-        HideGameplayUI();
+        //HideGameplayUI();
     }
 
     // Update is called once per frame
@@ -298,6 +298,14 @@ public class PlayerBehavior : CharacterBase
     {
         HideButton();
         button.SetActive(true);
+        if(button.tag == "teste1")
+        {
+            StartCoroutine(UIController.ChangeButtonText(1));
+        }
+        else if (button.tag == "teste2")
+        {
+            StartCoroutine(UIController.ChangeButtonText(2));
+        }
     }
 
     public void HideButton()

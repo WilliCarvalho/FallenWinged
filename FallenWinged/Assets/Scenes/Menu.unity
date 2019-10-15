@@ -897,7 +897,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -1074,18 +1074,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75870153}
   m_CullTransparentMesh: 0
---- !u!114 &99871850 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1394450008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b988a0a804360b14d998877c549dd343, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &100921148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1243,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerItem
         m_Mode: 3
         m_Arguments:
@@ -2373,7 +2361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -2523,7 +2511,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -2895,7 +2883,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -3034,7 +3022,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -4086,7 +4074,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: ActiveMenu
         m_Mode: 2
         m_Arguments:
@@ -4632,7 +4620,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -6170,7 +6158,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -7665,7 +7653,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -8229,7 +8217,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: RemovePlayerItem
         m_Mode: 1
         m_Arguments:
@@ -8492,7 +8480,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -9772,7 +9760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -9783,7 +9771,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetActionButton
         m_Mode: 2
         m_Arguments:
@@ -10243,7 +10231,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -11508,7 +11496,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -11519,7 +11507,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetActionButton
         m_Mode: 2
         m_Arguments:
@@ -12117,7 +12105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -12697,7 +12685,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -12945,7 +12933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -12956,7 +12944,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetActionButton
         m_Mode: 2
         m_Arguments:
@@ -14283,225 +14271,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1394450008
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5840733915865683709, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.2702794
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7965571
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.025390625
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683699, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: ValorComun
-      value: 
-      objectReference: {fileID: 1920476426}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: ValorConc
-      value: 
-      objectReference: {fileID: 1040926323}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: ValorPrec
-      value: 
-      objectReference: {fileID: 1045515733}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: ValorRefle
-      value: 
-      objectReference: {fileID: 1590255884}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: valorComun
-      value: 
-      objectReference: {fileID: 1920476426}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: valorConc
-      value: 
-      objectReference: {fileID: 1040926323}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: valorPrec
-      value: 
-      objectReference: {fileID: 1045515733}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: valorRefle
-      value: 
-      objectReference: {fileID: 1590255884}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: textComunicacao
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: textConcentracao
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: textPrecisao
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: textReflexo
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: storeTextConcentracao
-      value: 
-      objectReference: {fileID: 1831913437}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: storeTextComunicacao
-      value: 
-      objectReference: {fileID: 783736798}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: storeTextPrecisao
-      value: 
-      objectReference: {fileID: 1330625731}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: storeTextReflexo
-      value: 
-      objectReference: {fileID: 1147275043}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: idleSprite
-      value: 
-      objectReference: {fileID: 438231051}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: successSprite
-      value: 
-      objectReference: {fileID: 1746660893}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: failSprite
-      value: 
-      objectReference: {fileID: 1254509055}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: startButton
-      value: 
-      objectReference: {fileID: 1533470304}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: successText
-      value: 
-      objectReference: {fileID: 380516326}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: failText
-      value: 
-      objectReference: {fileID: 455862284}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: firstActionText
-      value: 
-      objectReference: {fileID: 454432142}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: secondActionText
-      value: 
-      objectReference: {fileID: 352474495}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: thirdActionText
-      value: 
-      objectReference: {fileID: 1975222076}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: popUpPanel
-      value: 
-      objectReference: {fileID: 1650332907}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: secondButton
-      value: 
-      objectReference: {fileID: 448731766}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: thirdButton
-      value: 
-      objectReference: {fileID: 1399822803}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: popUpPanel2
-      value: 
-      objectReference: {fileID: 2050511341}
-    - target: {fileID: 5840733915865683708, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce,
-        type: 3}
-      propertyPath: popUpPanel3
-      value: 
-      objectReference: {fileID: 75870153}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8a9d194a5bd8b4d43a402fbe77dfe7ce, type: 3}
 --- !u!1 &1399822803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14581,7 +14350,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: ActiveMenu
         m_Mode: 2
         m_Arguments:
@@ -15206,7 +14975,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerItem
         m_Mode: 3
         m_Arguments:
@@ -15345,7 +15114,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -16283,7 +16052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: ActiveMenu
         m_Mode: 2
         m_Arguments:
@@ -17404,7 +17173,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -17917,7 +17686,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -18149,7 +17918,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -18685,7 +18454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -18993,7 +18762,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -19132,7 +18901,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerItem
         m_Mode: 3
         m_Arguments:
@@ -19809,7 +19578,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -19948,7 +19717,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: RemovePlayerItem
         m_Mode: 1
         m_Arguments:
@@ -20087,7 +19856,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerItem
         m_Mode: 3
         m_Arguments:
@@ -21286,7 +21055,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: PlayerActionTest
         m_Mode: 3
         m_Arguments:
@@ -21297,7 +21066,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetActionButton
         m_Mode: 2
         m_Arguments:
@@ -21564,7 +21333,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 99871850}
+      - m_Target: {fileID: 5840733917193013412}
         m_MethodName: SetPlayerType
         m_Mode: 3
         m_Arguments:
@@ -23771,6 +23540,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0a7464456f1bd24387ccf3a177637bf, type: 3}
+--- !u!114 &5840733917193013412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840733917193013413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b988a0a804360b14d998877c549dd343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 0
+  basicStats:
+    concentracao: 0
+    comunicacao: 0
+    precisao: 0
+    reflexo: 0
+  i: 0
+  valorComun: {fileID: 1920476426}
+  valorConc: {fileID: 1040926323}
+  valorPrec: {fileID: 1045515733}
+  valorRefle: {fileID: 1590255884}
+  idleSprite: {fileID: 438231051}
+  successSprite: {fileID: 1746660893}
+  failSprite: {fileID: 1254509055}
+  startButton: {fileID: 1533470304}
+  secondButton: {fileID: 448731766}
+  thirdButton: {fileID: 1399822803}
+  successText: {fileID: 380516326}
+  failText: {fileID: 455862284}
+  firstActionText: {fileID: 454432142}
+  secondActionText: {fileID: 352474495}
+  thirdActionText: {fileID: 1975222076}
+  popUpPanel: {fileID: 1650332907}
+  popUpPanel2: {fileID: 2050511341}
+  popUpPanel3: {fileID: 75870153}
+--- !u!1 &5840733917193013413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5840733917193013419}
+  - component: {fileID: 5840733917193013412}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5840733917193013419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840733917193013413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2702796, y: 0.7965571, z: -0.025390625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8347819430150479741
 PrefabInstance:
   m_ObjectHideFlags: 0
