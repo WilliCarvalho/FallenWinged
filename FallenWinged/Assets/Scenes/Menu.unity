@@ -2659,7 +2659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &352474496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7106,6 +7106,7 @@ MonoBehaviour:
   xp: {fileID: 1277314837}
   level: {fileID: 1473178871}
   nextLevel: {fileID: 2011113357}
+  textActive: 0
 --- !u!1 &672420157
 GameObject:
   m_ObjectHideFlags: 0
@@ -21627,7 +21628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1975222077
 RectTransform:
   m_ObjectHideFlags: 0

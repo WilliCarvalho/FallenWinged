@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour
     public static Text situationText;
     public static Text situarionText2;
 
+    public int textActive;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -28,11 +30,16 @@ public class UIController : MonoBehaviour
         xp.text = PlayerStatsController.GetCurrentXp().ToString();
         level.text = PlayerStatsController.GetCurrentLevel().ToString();
         nextLevel.text = PlayerStatsController.GetNextXp().ToString();
-    }
 
-    public void CoroutineStarter()
-    {
-       StartCoroutine(ChangeButtonText(1));
+        if(textActive == 1)
+        {
+            StartCoroutine(UIController.ChangeButtonText(1));
+        }
+        else if (textActive == 2)
+        {
+            StartCoroutine(UIController.ChangeButtonText(2));
+        }
+
     }
 
     public static IEnumerator ChangeButtonText(int aux)

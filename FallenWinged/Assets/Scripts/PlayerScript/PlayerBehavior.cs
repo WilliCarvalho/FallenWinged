@@ -16,6 +16,7 @@ public class PlayerBehavior : CharacterBase
     public static PlayerBehavior instance;
 
     public int i;
+    public int testSection = 1;
     private TypeCharacter type;
     private TypeItem itemType;
 
@@ -260,6 +261,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 successSprite.SetActive(true);
                 successText.SetActive(true);
+                StartCoroutine(ChangeText());
             }
             else
             {
@@ -269,6 +271,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite.SetActive(true);
                 failText.SetActive(true);
+                StartCoroutine(ChangeText());
             }
         }
         else if(PlayerStatsController.instance.challengeDifficulty == 18)
@@ -280,6 +283,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 successSprite.SetActive(true);
                 successText.SetActive(true);
+                StartCoroutine(ChangeText());
             }
             else
             {
@@ -288,24 +292,32 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite.SetActive(true);
                 failText.SetActive(true);
+                StartCoroutine(ChangeText());
             }
         }
 
 
     }
 
-    public void SetActionButton(GameObject button)
+    IEnumerator ChangeText()
     {
+        yield return new WaitForSeconds(1.5f);
         HideButton();
-        button.SetActive(true);
-        if(button.tag == "teste1")
+        HideGameplayUI();
+        idleSprite.SetActive(true);
+
+        if (testSection == 1)
         {
-            StartCoroutine(UIController.ChangeButtonText(1));
+            secondButton.SetActive(true);
+            testSection++;
         }
-        else if (button.tag == "teste2")
+        else if(testSection == 2)
         {
-            StartCoroutine(UIController.ChangeButtonText(2));
+            thirdButton.SetActive(true);
+            testSection++;
         }
+        print(testSection);
+        
     }
 
     public void HideButton()
@@ -330,10 +342,7 @@ public class PlayerBehavior : CharacterBase
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
         successText.SetActive(false);
-        failText.SetActive(false);
-        firstActionText.SetActive(false);
-        secondActionText.SetActive(false);
-        thirdActionText.SetActive(false);
+        failText.SetActive(false);        
         popUpPanel.SetActive(false);
         popUpPanel2.SetActive(false);
         popUpPanel3.SetActive(false);
