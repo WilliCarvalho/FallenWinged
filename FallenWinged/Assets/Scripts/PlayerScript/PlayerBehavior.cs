@@ -14,9 +14,10 @@ public enum TypeCharacter
 public class PlayerBehavior : CharacterBase
 {
     public static PlayerBehavior instance;
-
+   
     public int i;
     public int testSection = 1;
+    private int victory;
     private TypeCharacter type;
     private TypeItem itemType;
 
@@ -27,13 +28,26 @@ public class PlayerBehavior : CharacterBase
 
     public GameObject
         idleSprite,
-        successSprite,
-        failSprite,
+        successSprite1,
+        failSprite1,       
         startButton,
         secondButton,
         thirdButton,
-        successText,
-        failText,
+        forthButton,
+        successText1,
+        failText1,
+        successText2,
+        failText2,
+        successText3,
+        failText3,
+        successText4,
+        failText4,
+        successText5,
+        failText5,
+        successText6,
+        failText6,
+        successTextMatch,
+        failTextMatch,
         firstActionText,
         secondActionText,
         thirdActionText,
@@ -257,41 +271,87 @@ public class PlayerBehavior : CharacterBase
             {
                 print(addStatus + " " + (basicStats.concentracao + addStatus));
                 PlayerStatsController.AddXp(100);
-                PlayerStatsController.instance.coins += 50;
+                //PlayerStatsController.instance.coins += 50;
                 HideGameplayUI();
-                successSprite.SetActive(true);
-                successText.SetActive(true);
+                successSprite1.SetActive(true);
+                successText1.SetActive(true);
+                victory++;
                 StartCoroutine(ChangeText());
             }
             else
             {
                 print(addStatus + " " + basicStats.concentracao + addStatus);
-                PlayerStatsController.AddXp(10);
-                PlayerStatsController.instance.coins += 5;
+                PlayerStatsController.AddXp(50);
+                //PlayerStatsController.instance.coins += 5;
                 HideGameplayUI();
-                failSprite.SetActive(true);
-                failText.SetActive(true);
+                failSprite1.SetActive(true);
+                failText1.SetActive(true);
                 StartCoroutine(ChangeText());
             }
         }
-        else if(PlayerStatsController.instance.challengeDifficulty == 18)
+        else if (PlayerStatsController.instance.challengeDifficulty == 16)
         {
-            if(basicStats.precisao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            if (basicStats.precisao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
             {
                 print(addStatus + " " + (basicStats.precisao + addStatus));
                 PlayerStatsController.AddXp(100);
                 HideGameplayUI();
-                successSprite.SetActive(true);
-                successText.SetActive(true);
+                successSprite1.SetActive(true);
+                successText3.SetActive(true);
+                victory++;
                 StartCoroutine(ChangeText());
             }
             else
             {
                 print(addStatus + " " + (basicStats.precisao + addStatus));
-                PlayerStatsController.AddXp(10);
+                PlayerStatsController.AddXp(50);
                 HideGameplayUI();
-                failSprite.SetActive(true);
-                failText.SetActive(true);
+                failSprite1.SetActive(true);
+                failText3.SetActive(true);
+                StartCoroutine(ChangeText());
+            }
+        }
+        else if (PlayerStatsController.instance.challengeDifficulty == 17)
+        {
+            if (basicStats.comunicacao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            {
+                print(addStatus + " " + (basicStats.comunicacao + addStatus));
+                PlayerStatsController.AddXp(100);
+                HideGameplayUI();
+                successSprite1.SetActive(true);
+                successText4.SetActive(true);
+                victory++;
+                StartCoroutine(ChangeText());
+            }
+            else
+            {
+                print(addStatus + " " + (basicStats.comunicacao + addStatus));
+                PlayerStatsController.AddXp(50);
+                HideGameplayUI();
+                failSprite1.SetActive(true);
+                failText4.SetActive(true);
+                StartCoroutine(ChangeText());
+            }
+        }
+        else if(PlayerStatsController.instance.challengeDifficulty == 18)
+        {
+            if(basicStats.reflexo + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            {
+                print(addStatus + " " + (basicStats.reflexo + addStatus));
+                PlayerStatsController.AddXp(100);
+                HideGameplayUI();
+                successSprite1.SetActive(true);
+                successText2.SetActive(true);
+                victory++;
+                StartCoroutine(ChangeText());
+            }
+            else
+            {
+                print(addStatus + " " + (basicStats.reflexo + addStatus));
+                PlayerStatsController.AddXp(50);
+                HideGameplayUI();
+                failSprite1.SetActive(true);
+                failText2.SetActive(true);
                 StartCoroutine(ChangeText());
             }
         }
@@ -301,7 +361,7 @@ public class PlayerBehavior : CharacterBase
 
     IEnumerator ChangeText()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3.0f);
         HideButton();
         HideGameplayUI();
         idleSprite.SetActive(true);
@@ -314,6 +374,34 @@ public class PlayerBehavior : CharacterBase
         else if(testSection == 2)
         {
             thirdButton.SetActive(true);
+            testSection++;
+        }
+        else if(testSection == 3)
+        {
+            if(victory >= 2)
+            {
+                HideGameplayUI();
+                successSprite1.SetActive(true);
+                successTextMatch.SetActive(true);
+                PlayerStatsController.AddXp(500);
+                PlayerStatsController.instance.coins += 1000;
+            }
+            else
+            {
+                HideGameplayUI();
+                failSprite1.SetActive(true);
+                failTextMatch.SetActive(true);
+                PlayerStatsController.AddXp(250);
+                PlayerStatsController.instance.coins += 500;
+            }            
+            testSection++;
+            StartCoroutine(ChangeText());
+        }
+        else if (testSection == 4)
+        {
+            HideGameplayUI();            
+            idleSprite.SetActive(true);
+            forthButton.SetActive(true);
             testSection++;
         }
         print(testSection);
@@ -336,13 +424,25 @@ public class PlayerBehavior : CharacterBase
 
     public void HideGameplayUI()
     {
-        successSprite.SetActive(false);
-        failSprite.SetActive(false);
+        successSprite1.SetActive(false);
+        failSprite1.SetActive(false);        
         startButton.SetActive(false);
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
-        successText.SetActive(false);
-        failText.SetActive(false);        
+        successText1.SetActive(false);
+        failText1.SetActive(false);
+        successText2.SetActive(false);
+        failText2.SetActive(false);
+        successText3.SetActive(false);
+        failText3.SetActive(false);
+        successText4.SetActive(false);
+        failText4.SetActive(false);
+        successText5.SetActive(false);
+        failText5.SetActive(false);
+        successText6.SetActive(false);
+        failText6.SetActive(false);
+        successTextMatch.SetActive(false);
+        failTextMatch.SetActive(false);
         popUpPanel.SetActive(false);
         popUpPanel2.SetActive(false);
         popUpPanel3.SetActive(false);
