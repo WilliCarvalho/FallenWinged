@@ -14,9 +14,14 @@ public class PlayerStatsController : MonoBehaviour
     public static PlayerStatsController instance;
 
     public int xpMultiply = 1;
+    public int attributsPerLevel = 1;
     public float xpFirstLevel = 100;
     public float difficultFactor = 1.5f;
+
     public List<BasicInfoChar> baseInfoChars;
+
+    public int challengeDifficulty;
+    public int coins = 0;
 
 
 
@@ -68,6 +73,26 @@ public class PlayerStatsController : MonoBehaviour
     {
         int newLevel = GetCurrentLevel() + 1;
         PlayerPrefs.SetInt("currentLevel", newLevel);
+        PlayerPrefs.SetInt("attributesPoints", GetAttributsPoints() + instance.attributsPerLevel);
+    }
+
+    public static int GetAttributsPoints()
+    {
+        return PlayerPrefs.GetInt("attributesPoints");
+    }
+
+    public static void AddAttribute(string attributeName, int value)
+    {
+        if (GetAttributsPoints() > 0)
+        {
+            PlayerPrefs.SetInt("attribute" + attributeName, GetAttribute(attributeName) + value);
+            PlayerPrefs.SetInt("attributesPoints", PlayerPrefs.GetInt("attributesPoints") - 1);
+
+        }
+    }
+    public static int GetAttribute(string attributeName)
+    {
+        return PlayerPrefs.GetInt("attribute" + attributeName);
     }
 
     public static float GetNextXp()
