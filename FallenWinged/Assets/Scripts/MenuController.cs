@@ -1,28 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject selectPlayerMenu;
 
-    public GameObject 
-        character1, 
-        character2, 
-        character3, 
-        character4, 
-        equipmentselection, 
-        mentordialogue1, 
-        mentordialogue2, 
+    public GameObject
+        character1,
+        character2,
+        character3,
+        character4,
+        equipmentselection,
+        mentordialogue1,
+        mentordialogue2,
         championshipscreen,
-        rankedpanel, 
-        regionalpanel, 
-        nacionapanel, 
-        mundialpanel, 
-        store, stats, 
-        gameplay, 
+        rankedpanel,
+        regionalpanel,
+        nacionapanel,
+        mundialpanel,
+        store, stats,
+        gameplay,
         statusDisplayValues;
+
+    public GameObject
+        valorComun,
+        valorConc,
+        valorPrec,
+        valorRefle;
 
 
 
@@ -31,13 +38,13 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActiveMenu(mainMenu);        
+        ActiveMenu(mainMenu);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void HideMenu()
@@ -60,6 +67,11 @@ public class MenuController : MonoBehaviour
         stats.SetActive(false);
         gameplay.SetActive(false);
         statusDisplayValues.SetActive(false);
+
+        valorComun.GetComponent<Text>().color = Color.white;
+        valorConc.GetComponent<Text>().color = Color.white;
+        valorPrec.GetComponent<Text>().color = Color.white;
+        valorRefle.GetComponent<Text>().color = Color.white;
     }
 
     public void ActiveMenu(GameObject menu)
@@ -67,7 +79,7 @@ public class MenuController : MonoBehaviour
         HideMenu();
         menu.SetActive(true);
 
-        if(menu.tag == "CharacterSelect")
+        if (menu.tag == "CharacterSelect")
         {
             statusDisplayValues.SetActive(true);
         }
