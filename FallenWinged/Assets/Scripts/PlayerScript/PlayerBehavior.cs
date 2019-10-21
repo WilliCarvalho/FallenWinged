@@ -25,6 +25,14 @@ public class PlayerBehavior : CharacterBase
     public Text valorConc;
     public Text valorPrec;
     public Text valorRefle;
+    public Text valorComun2;
+    public Text valorConc2;
+    public Text valorPrec2;
+    public Text valorRefle2;
+    public Text valorComun3;
+    public Text valorConc3;
+    public Text valorPrec3;
+    public Text valorRefle3;
 
     public GameObject
         idleSprite,
@@ -77,6 +85,14 @@ public class PlayerBehavior : CharacterBase
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
+        valorComun2.text = basicStats.comunicacao.ToString();
+        valorConc2.text = basicStats.concentracao.ToString();
+        valorPrec2.text = basicStats.precisao.ToString();
+        valorRefle2.text = basicStats.reflexo.ToString();
+        valorComun3.text = basicStats.comunicacao.ToString();
+        valorConc3.text = basicStats.concentracao.ToString();
+        valorPrec3.text = basicStats.precisao.ToString();
+        valorRefle3.text = basicStats.reflexo.ToString();
 
         //HideGameplayUI();
     }
@@ -119,6 +135,14 @@ public class PlayerBehavior : CharacterBase
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
+        valorComun2.text = basicStats.comunicacao.ToString();
+        valorConc2.text = basicStats.concentracao.ToString();
+        valorPrec2.text = basicStats.precisao.ToString();
+        valorRefle2.text = basicStats.reflexo.ToString();
+        valorComun3.text = basicStats.comunicacao.ToString();
+        valorConc3.text = basicStats.concentracao.ToString();
+        valorPrec3.text = basicStats.precisao.ToString();
+        valorRefle3.text = basicStats.reflexo.ToString();
         TextColorChange();
     }
 
@@ -215,6 +239,14 @@ public class PlayerBehavior : CharacterBase
         valorConc.text = basicStats.concentracao.ToString();
         valorPrec.text = basicStats.precisao.ToString();
         valorRefle.text = basicStats.reflexo.ToString();
+        valorComun2.text = basicStats.comunicacao.ToString();
+        valorConc2.text = basicStats.concentracao.ToString();
+        valorPrec2.text = basicStats.precisao.ToString();
+        valorRefle2.text = basicStats.reflexo.ToString();
+        valorComun3.text = basicStats.comunicacao.ToString();
+        valorConc3.text = basicStats.concentracao.ToString();
+        valorPrec3.text = basicStats.precisao.ToString();
+        valorRefle3.text = basicStats.reflexo.ToString();
 
     }
 

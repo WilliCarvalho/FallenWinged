@@ -11,6 +11,14 @@ public class UIController : MonoBehaviour
     public Text xp;
     public Text level;
     public Text nextLevel;
+    public Text coins2;
+    public Text xp2;
+    public Text level2;
+    public Text nextLevel2;
+    public Text coins3;
+    public Text xp3;
+    public Text level3;
+    public Text nextLevel3;
 
     public static Text situationText;
     public static Text situarionText2;
@@ -30,6 +38,14 @@ public class UIController : MonoBehaviour
         xp.text = PlayerStatsController.GetCurrentXp().ToString();
         level.text = PlayerStatsController.GetCurrentLevel().ToString();
         nextLevel.text = PlayerStatsController.GetNextXp().ToString();
+        coins2.text = PlayerStatsController.instance.coins.ToString();
+        xp2.text = PlayerStatsController.GetCurrentXp().ToString();
+        level2.text = PlayerStatsController.GetCurrentLevel().ToString();
+        nextLevel2.text = PlayerStatsController.GetNextXp().ToString();
+        coins3.text = PlayerStatsController.instance.coins.ToString();
+        xp3.text = PlayerStatsController.GetCurrentXp().ToString();
+        level3.text = PlayerStatsController.GetCurrentLevel().ToString();
+        nextLevel3.text = PlayerStatsController.GetNextXp().ToString();
 
         if(textActive == 1)
         {
