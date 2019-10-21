@@ -55,4 +55,25 @@ public class UIController : MonoBehaviour
             situarionText2.enabled = true;
         }
     }
+
+    public void OpenURLHeadset()
+    {
+        StartCoroutine(WaitOpenURL());
+    }
+
+    IEnumerator WaitOpenURL()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Application.OpenURL("https://www.fallenstore.com.br/categoria/headsets");
+    }
+    public void OpenURLGlasses()
+    {
+        StartCoroutine(WaitOpenURL2());
+    }
+
+    IEnumerator WaitOpenURL2()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Application.OpenURL("https://www.fallenstore.com.br/busca?s=oculos");
+    }
 }

@@ -55,6 +55,9 @@ public class PlayerBehavior : CharacterBase
         popUpPanel2,
         popUpPanel3;
 
+    public GameObject
+        victorySound,
+        defeatSound;
 
 
     private int itemId;
@@ -276,6 +279,7 @@ public class PlayerBehavior : CharacterBase
                 successSprite1.SetActive(true);
                 successText1.SetActive(true);
                 victory++;
+                victorySound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
             else
@@ -286,6 +290,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite1.SetActive(true);
                 failText1.SetActive(true);
+                defeatSound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
         }
@@ -299,6 +304,7 @@ public class PlayerBehavior : CharacterBase
                 successSprite1.SetActive(true);
                 successText3.SetActive(true);
                 victory++;
+                victorySound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
             else
@@ -308,6 +314,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite1.SetActive(true);
                 failText3.SetActive(true);
+                defeatSound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
         }
@@ -321,6 +328,7 @@ public class PlayerBehavior : CharacterBase
                 successSprite1.SetActive(true);
                 successText4.SetActive(true);
                 victory++;
+                victorySound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
             else
@@ -330,6 +338,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite1.SetActive(true);
                 failText4.SetActive(true);
+                defeatSound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
         }
@@ -343,6 +352,7 @@ public class PlayerBehavior : CharacterBase
                 successSprite1.SetActive(true);
                 successText2.SetActive(true);
                 victory++;
+                victorySound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
             else
@@ -352,6 +362,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite1.SetActive(true);
                 failText2.SetActive(true);
+                defeatSound.GetComponent<AudioSource>().Play();
                 StartCoroutine(ChangeText());
             }
         }
@@ -383,6 +394,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 successSprite1.SetActive(true);
                 successTextMatch.SetActive(true);
+                victorySound.GetComponent<AudioSource>().Play();
                 PlayerStatsController.AddXp(500);
                 PlayerStatsController.instance.coins += 1000;
             }
@@ -391,6 +403,7 @@ public class PlayerBehavior : CharacterBase
                 HideGameplayUI();
                 failSprite1.SetActive(true);
                 failTextMatch.SetActive(true);
+                defeatSound.GetComponent<AudioSource>().Play();
                 PlayerStatsController.AddXp(250);
                 PlayerStatsController.instance.coins += 500;
             }            
