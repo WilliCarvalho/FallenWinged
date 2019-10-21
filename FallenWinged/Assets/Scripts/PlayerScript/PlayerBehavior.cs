@@ -21,11 +21,10 @@ public class PlayerBehavior : CharacterBase
     private TypeCharacter type;
     private TypeItem itemType;
 
-    public GameObject 
-        valorComun,
-        valorConc,
-        valorPrec,
-        valorRefle;
+    public Text valorComun;
+    public Text valorConc;
+    public Text valorPrec;
+    public Text valorRefle;
 
     public GameObject
         idleSprite,
@@ -71,10 +70,10 @@ public class PlayerBehavior : CharacterBase
         //animationController = GetComponent<AnimationController>();
         basicStats = PlayerStatsController.instance.GetBasicStats(type);
 
-        valorComun.GetComponent<Text>().text = basicStats.comunicacao.ToString();
-        valorConc.GetComponent<Text>().text = basicStats.concentracao.ToString();
-        valorPrec.GetComponent<Text>().text = basicStats.precisao.ToString();
-        valorRefle.GetComponent<Text>().text = basicStats.reflexo.ToString();
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
 
         //HideGameplayUI();
     }
@@ -113,10 +112,10 @@ public class PlayerBehavior : CharacterBase
             basicStats = PlayerStatsController.instance.GetBasicStats(type);
         }
 
-        valorComun.GetComponent<Text>().text = basicStats.comunicacao.ToString();
-        valorConc.GetComponent<Text>().text = basicStats.concentracao.ToString();
-        valorPrec.GetComponent<Text>().text = basicStats.precisao.ToString();
-        valorRefle.GetComponent<Text>().text = basicStats.reflexo.ToString();
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
         TextColorChange();
     }
 
@@ -128,7 +127,7 @@ public class PlayerBehavior : CharacterBase
         {
             valorComun.GetComponent<Text>().color = Color.green;
         }
-        else if (basicStats.comunicacao < 10)
+        else if(basicStats.comunicacao < 10)
         {
             valorComun.GetComponent<Text>().color = Color.red;
         }
@@ -209,10 +208,10 @@ public class PlayerBehavior : CharacterBase
 
             basicStats.AddValues(basicStatsItem);
         }
-        valorComun.GetComponent<Text>().text = basicStats.comunicacao.ToString();
-        valorConc.GetComponent<Text>().text = basicStats.concentracao.ToString();
-        valorPrec.GetComponent<Text>().text = basicStats.precisao.ToString();
-        valorRefle.GetComponent<Text>().text = basicStats.reflexo.ToString();
+        valorComun.text = basicStats.comunicacao.ToString();
+        valorConc.text = basicStats.concentracao.ToString();
+        valorPrec.text = basicStats.precisao.ToString();
+        valorRefle.text = basicStats.reflexo.ToString();
 
     }
 
@@ -266,9 +265,9 @@ public class PlayerBehavior : CharacterBase
         PlayerStatsController.instance.challengeDifficulty = aux;
         int addStatus = Random.Range(1, 10);
 
-        if (PlayerStatsController.instance.challengeDifficulty == 15)
+        if(PlayerStatsController.instance.challengeDifficulty == 15)
         {
-            if (basicStats.concentracao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            if(basicStats.concentracao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
             {
                 print(addStatus + " " + (basicStats.concentracao + addStatus));
                 PlayerStatsController.AddXp(100);
@@ -283,7 +282,6 @@ public class PlayerBehavior : CharacterBase
             {
                 print(addStatus + " " + basicStats.concentracao + addStatus);
                 PlayerStatsController.AddXp(50);
-                PlayerStatsController.AddXp(10);
                 //PlayerStatsController.instance.coins += 5;
                 HideGameplayUI();
                 failSprite1.SetActive(true);
@@ -291,11 +289,7 @@ public class PlayerBehavior : CharacterBase
                 StartCoroutine(ChangeText());
             }
         }
-
-        else if (PlayerStatsController.instance.challengeDifficulty == 16);
-
-        else if (PlayerStatsController.instance.challengeDifficulty == 18)
-
+        else if (PlayerStatsController.instance.challengeDifficulty == 16)
         {
             if (basicStats.precisao + addStatus >= PlayerStatsController.instance.challengeDifficulty)
             {
@@ -339,9 +333,9 @@ public class PlayerBehavior : CharacterBase
                 StartCoroutine(ChangeText());
             }
         }
-        else if (PlayerStatsController.instance.challengeDifficulty == 18)
+        else if(PlayerStatsController.instance.challengeDifficulty == 18)
         {
-            if (basicStats.reflexo + addStatus >= PlayerStatsController.instance.challengeDifficulty)
+            if(basicStats.reflexo + addStatus >= PlayerStatsController.instance.challengeDifficulty)
             {
                 print(addStatus + " " + (basicStats.reflexo + addStatus));
                 PlayerStatsController.AddXp(100);
@@ -377,7 +371,7 @@ public class PlayerBehavior : CharacterBase
             secondButton.SetActive(true);
             testSection++;
         }
-        else if (testSection == 2)
+        else if(testSection == 2)
         {
             thirdButton.SetActive(true);
             testSection++;
@@ -411,7 +405,7 @@ public class PlayerBehavior : CharacterBase
             testSection++;
         }
         print(testSection);
-
+        
     }
 
     public void HideButton()
@@ -426,15 +420,6 @@ public class PlayerBehavior : CharacterBase
         HideGameplayUI();
         idleSprite.SetActive(true);
         menu.SetActive(true);
-    }
-
-    public void ResetStats()
-    {
-        basicStats = PlayerStatsController.instance.GetBasicStats(type);
-        basicStats.comunicacao = 10;
-        basicStats.concentracao = 10;
-        basicStats.precisao = 10;
-        instance.basicStats.reflexo = 10;
     }
 
     public void HideGameplayUI()
@@ -458,8 +443,6 @@ public class PlayerBehavior : CharacterBase
         failText6.SetActive(false);
         successTextMatch.SetActive(false);
         failTextMatch.SetActive(false);
-        successText.SetActive(false);
-        failText.SetActive(false);
         popUpPanel.SetActive(false);
         popUpPanel2.SetActive(false);
         popUpPanel3.SetActive(false);
