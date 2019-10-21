@@ -33,6 +33,10 @@ public class PlayerBehavior : CharacterBase
     public Text valorConc3;
     public Text valorPrec3;
     public Text valorRefle3;
+    public Text valorComun4;
+    public Text valorConc4;
+    public Text valorPrec4;
+    public Text valorRefle4;
 
     public GameObject
         idleSprite,
@@ -93,6 +97,10 @@ public class PlayerBehavior : CharacterBase
         valorConc3.text = basicStats.concentracao.ToString();
         valorPrec3.text = basicStats.precisao.ToString();
         valorRefle3.text = basicStats.reflexo.ToString();
+        valorComun4.text = basicStats.comunicacao.ToString();
+        valorConc4.text = basicStats.concentracao.ToString();
+        valorPrec4.text = basicStats.precisao.ToString();
+        valorRefle4.text = basicStats.reflexo.ToString();
 
         //HideGameplayUI();
     }
@@ -143,6 +151,10 @@ public class PlayerBehavior : CharacterBase
         valorConc3.text = basicStats.concentracao.ToString();
         valorPrec3.text = basicStats.precisao.ToString();
         valorRefle3.text = basicStats.reflexo.ToString();
+        valorComun4.text = basicStats.comunicacao.ToString();
+        valorConc4.text = basicStats.concentracao.ToString();
+        valorPrec4.text = basicStats.precisao.ToString();
+        valorRefle4.text = basicStats.reflexo.ToString();
         TextColorChange();
     }
 
@@ -247,6 +259,10 @@ public class PlayerBehavior : CharacterBase
         valorConc3.text = basicStats.concentracao.ToString();
         valorPrec3.text = basicStats.precisao.ToString();
         valorRefle3.text = basicStats.reflexo.ToString();
+        valorComun4.text = basicStats.comunicacao.ToString();
+        valorConc4.text = basicStats.concentracao.ToString();
+        valorPrec4.text = basicStats.precisao.ToString();
+        valorRefle4.text = basicStats.reflexo.ToString();
 
     }
 

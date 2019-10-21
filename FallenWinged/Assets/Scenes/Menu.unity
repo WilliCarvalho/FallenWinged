@@ -9498,7 +9498,7 @@ RectTransform:
   m_GameObject: {fileID: 783736794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 172.8}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01148265, y: 0.01148265, z: 0.01}
   m_Children: []
   m_Father: {fileID: 204214155}
   m_RootOrder: 2
@@ -14425,7 +14425,7 @@ RectTransform:
   m_GameObject: {fileID: 1147275039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 172.8}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01148265, y: 0.01148265, z: 0.01}
   m_Children: []
   m_Father: {fileID: 204214155}
   m_RootOrder: 1
@@ -17069,7 +17069,7 @@ RectTransform:
   m_GameObject: {fileID: 1330625727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 172.8}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01148265, y: 0.01148265, z: 0.01}
   m_Children: []
   m_Father: {fileID: 204214155}
   m_RootOrder: 3
@@ -18281,7 +18281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1419089835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24326,7 +24326,7 @@ RectTransform:
   m_GameObject: {fileID: 1831913433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 172.8}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01148265, y: 0.01148265, z: 0.01}
   m_Children: []
   m_Father: {fileID: 204214155}
   m_RootOrder: 0
@@ -27787,7 +27787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2105202967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28464,6 +28464,10 @@ MonoBehaviour:
   valorConc3: {fileID: 30886749}
   valorPrec3: {fileID: 1336192159}
   valorRefle3: {fileID: 1082153868}
+  valorComun4: {fileID: 783736798}
+  valorConc4: {fileID: 1831913437}
+  valorPrec4: {fileID: 1330625731}
+  valorRefle4: {fileID: 1147275043}
   idleSprite: {fileID: 438231051}
   successSprite1: {fileID: 1746660893}
   failSprite1: {fileID: 1254509055}
