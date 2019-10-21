@@ -124,6 +124,7 @@ a68cda3905da5cfbbd0e49085f8497fe Assembly-CSharp.dll:.ItemController
 2370970cbeb7ac898603528707169752 Assembly-CSharp.dll:.ItemBase
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
+7e3ae07e668bc56ee455e2c2afe68339 Assembly-CSharp.dll:.AudioController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ApplicationController
 924988c4b7c98af900a267e9179348b8 Assembly-CSharp.dll:.SlotInventoryBehavior
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -166,4 +167,3 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-7e3ae07e668bc56ee455e2c2afe68339 Assembly-CSharp.dll:.AudioController

@@ -28,6 +28,7 @@ public class PlayerStatsController : MonoBehaviour
     void Start()
     {
         instance = this;
+        PlayerPrefs.DeleteAll();
         AddLevel();
         DontDestroyOnLoad(gameObject);
         //Application.LoadLevel("Gameplay");
