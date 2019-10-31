@@ -20,4 +20,11 @@ public class ItemBase : MonoBehaviour
     {
         return amount;
     }
+
+    //Get a random item by drop (still in construction)
+    public void GetDrop()
+    {
+        IventoryController.instance.AddItemToIventory(this);
+    }
+
 }
